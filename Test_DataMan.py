@@ -15,7 +15,7 @@ df_filter = df_germany.loc[df_germany['Date_reported'] > start]  # setting start
 
 # calculating and setting the 7d Indicator:
 # calculating the sum of 7 consecutive days:
-df_filter['7d Indicator'] = df_filter['New_cases'].rolling(7).sum().shift(7)
+df_filter['7d Indicator'] = df_filter['New_cases'].rolling(7).sum()
 # divide the sum by Population(integer)/100.000 to get final 7d Indicator:
 df_filter['7d Indicator'] = df_filter['7d Indicator'] / 830
 df_filter['7d Indicator'] = round(df_filter['7d Indicator'], 0)  # round the float to make it neat
@@ -23,7 +23,7 @@ df_filter['7d Indicator'] = round(df_filter['7d Indicator'], 0)  # round the flo
 
 # calculating and setting the average for the daily deaths:
 # calculating the sum of 7 consecutive days:
-df_filter['Death 7d avg'] = df_filter['New_deaths'].rolling(7).sum().shift(7)
+df_filter['Death 7d avg'] = df_filter['New_deaths'].rolling(7).sum()
 df_filter['Death 7d avg'] = df_filter['Death 7d avg'] / 7  # calculate the 7d average
 df_filter['Death 7d avg'] = round(df_filter['Death 7d avg'], 2)  # round the float to make it neat
 
