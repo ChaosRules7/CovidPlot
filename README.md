@@ -9,7 +9,6 @@ The program is at the moment hard-coded to analyze the data for Germany since 20
 Requirements:
 - Pandas Libary (https://pandas.pydata.org/)
 - MatPlotLib Libary (https://matplotlib.org/)
-- WHO Covid Data as csv file (https://covid19.who.int/; button bottom right corner)
 
 
 Definition '7d Indicator':
